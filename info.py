@@ -60,7 +60,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003059886878'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002954653440 -1001545302652').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002954653440').split()]  # For Multiple Id Use One Space Between Each.
 
 
 
@@ -120,9 +120,9 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 
 # MongoDB information
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://harshithacharya632:j2UBud9b3XUpk4Pn@goflix.iff0agy.mongodb.net/goflix?retryWrites=true&w=majority&appName=Goflix")   # IF Multiple Database Is False Then Fill Only This Database Url.
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://harshithacharya633_db_user:kQzjXvzRW0DBLu@gofl1xbot2.vk2r2b9.mongodb.net/7retrywrites=true&w=majority&appName=Goflixbotz")   # IF Multiple Database Is False Then Fill Only This Database Url.
 
-DATABASE_NAME = environ.get('DATABASE_NAME', "Goflix")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Goflixbot2")
 
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
@@ -393,6 +393,7 @@ else:
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 
 # Ask Doubt on telegram @KingVJ01
+
 
 
 
