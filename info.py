@@ -59,7 +59,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 
 
 # MongoDB information
-DATABASE_URI = environ.get("mongodb+srv://harshithacharya633_db_user:kQzjXvzRWOO8LumH@goflixbot2.vkzr2b9.mongodb.net/?retryWrites=true&w=majority&appName=Goflixbot2")   # IF Multiple Database Is False Then Fill Only This Database Url.
+DATABASE_URI = environ.get("mongodb+srv://harshithacharya633_db:kQzjXvzRWOO8LumH@goflixbot2.vkzr2b9.mongodb.net/?retryWrites=true&w=majority&appName=Goflixbot2")   # IF Multiple Database Is False Then Fill Only This Database Url.
 DATABASE_NAME = environ.get('DATABASE_NAME', "Bot2")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
@@ -196,6 +196,7 @@ else:
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
+
 
 
 
