@@ -332,9 +332,9 @@ if 'DYNO' in environ:
 
 else:
 
-    ON_HEROKU = False
+    ON_HEROKU = True
 
-URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
+URL = environ.get("URL", "Online Video Player. Free. https://share.google/rsgEKs6RSdH5MbxEb")
 
 
 
@@ -393,6 +393,7 @@ else:
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 
 # Ask Doubt on telegram @KingVJ01
+
 
 
 
