@@ -1828,7 +1828,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
             button = [[
-            [InlineKeyboardButton("📊 Get Accurate Information", callback_data=f"get_info_{file_path}")
+                InlineKeyboardButton("📊 Get Accurate Information", callback_data=f"get_info_{file_path}")
     ]]
 
     await query.message.edit_reply_markup(InlineKeyboardMarkup(button))
@@ -3310,6 +3310,7 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
 
 
 
