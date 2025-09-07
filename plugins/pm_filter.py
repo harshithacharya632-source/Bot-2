@@ -1830,13 +1830,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             button = [[
             ],[  
                 InlineKeyboardButton("📊 Get Accurate Information", callback_data=f"get_info_{file_path}")
-            ]]
-    await query.message.edit_reply_markup(InlineKeyboardMarkup(button))
-
-except Exception as e:
-    print(e)
-await query.message.edit_reply_markup(InlineKeyboardMarkup(button))
-                
+            ]]        
             await query.message.edit_reply_markup(InlineKeyboardMarkup(button))
         except Exception as e:
             print(e)
@@ -3310,6 +3304,7 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
 
 
 
