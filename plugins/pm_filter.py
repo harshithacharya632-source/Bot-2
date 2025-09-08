@@ -94,42 +94,6 @@ async def next_page(bot, query):
     except:
         offset = 0
     search = FRESH.get(key)
-#Here the i change the code
-    from pyrogram import Client, filters
-import subprocess, json, os
-
-@Client.on_callback_query(filters.regex(r"get_info_(.*)"))
-async def send_media_info(client, callback_query):
-    file_path = callback_query.data.split("_", 2)[2]
-
-    if not os.path.exists(file_path):
-        await callback_query.answer("❌ File not found on server!", show_alert=True)
-        return
-
-    # Run ffprobe to extract metadata
-    cmd = f'ffprobe -v quiet -print_format json -show_format -show_streams "{file_path}"'
-    result = subprocess.check_output(cmd, shell=True).decode()
-    info = json.loads(result)
-
-    # Format output
-    text = "🎬 **Media Information**\n\n"
-    fmt = info.get("format", {})
-    text += f"📂 Format: `{fmt.get('format_name')}`\n"
-    text += f"💾 Size: `{round(int(fmt.get('size', 0)) / (1024*1024), 2)} MB`\n"
-    text += f"⏳ Duration: `{int(float(fmt.get('duration', 0)) // 60)}m {int(float(fmt.get('duration', 0)) % 60)}s`\n"
-    text += f"🎥 Bitrate: `{fmt.get('bit_rate', 'N/A')}`\n\n"
-
-    for stream in info.get("streams", []):
-        if stream["codec_type"] == "video":
-            text += f"🎥 Video: `{stream['codec_name'].upper()} {stream['width']}x{stream['height']} {stream['r_frame_rate']} fps`\n"
-        if stream["codec_type"] == "audio":
-            text += f"🎧 Audio: `{stream['codec_name'].upper()} | {stream.get('channels', 2)} ch`\n"
-        if stream["codec_type"] == "subtitle":
-            lang = stream.get("tags", {}).get("language", 'Unknown')
-            text += f"💬 Subtitle: `{lang}`\n"
-
-    await callback_query.message.edit_text(text)
-    #end this line
    # if not search:
       #  await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name),show_alert=True)
        # return
@@ -3304,6 +3268,7 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
 
 
 
