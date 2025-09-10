@@ -1,7 +1,7 @@
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
-MOVIE_CHANNEL_ID = -1002954653440   # put your movie storage channel ID here
+
 import os, string, logging, random, asyncio, time, datetime, re, sys, json, base64
 from Script import script
 from pyrogram import Client, filters, enums
@@ -1404,32 +1404,5 @@ async def purge_requests(client, message):
             parse_mode=enums.ParseMode.MARKDOWN,
             disable_web_page_preview=True
         )
-        #here the end ooooooooooo
-from pyrogram import Client, filters
 
-@Client.on_message(filters.command("start"))
-async def start(bot, message):
-    # Check if user clicked a deep-link (like ?start=MovieName)
-    if len(message.command) > 1:
-        movie_name = " ".join(message.command[1:])  # Get movie name
-
-        # Try to search in your database or channel
-        try:
-            # Example: forward/search file from your movie channel
-            # Replace MOVIE_CHANNEL_ID with your movie channel id
-            results = await bot.search_messages(chat_id=MOVIE_CHANNEL_ID, query=movie_name, limit=1)
-
-            if results:
-                await results[0].copy(message.chat.id)  # Send movie to user
-            else:
-                await message.reply_text(f"❌ Movie '{movie_name}' not found.")
-
-        except Exception as e:
-            await message.reply_text(f"⚠️ Error while searching: {e}")
-
-    else:
-        await message.reply_text(
-            "👋 Welcome to Joomoviebot!\n"
-            "Send me a movie name or click a search button."
-        )
 
