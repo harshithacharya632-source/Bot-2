@@ -1,7 +1,7 @@
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
-
+MOVIE_CHANNEL_ID = -1002954653440   # put your movie storage channel ID here
 import os, string, logging, random, asyncio, time, datetime, re, sys, json, base64
 from Script import script
 from pyrogram import Client, filters, enums
@@ -1432,3 +1432,4 @@ async def start(bot, message):
             "👋 Welcome to Joomoviebot!\n"
             "Send me a movie name or click a search button."
         )
+
