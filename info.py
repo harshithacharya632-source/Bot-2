@@ -334,7 +334,7 @@ else:
 
     ON_HEROKU = True
 
-URL = environ.get("URL", "Online Video Player. Free. https://share.google/rsgEKs6RSdH5MbxEb")
+URL = environ.get("URL", "https://share.google/rsgEKs6RSdH5MbxEb")
 
 
 
@@ -393,6 +393,7 @@ else:
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 
 # Ask Doubt on telegram @KingVJ01
+
 
 
 
