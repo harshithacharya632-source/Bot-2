@@ -328,13 +328,9 @@ PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 
 if 'DYNO' in environ:
 
-    ON_HEROKU = True
+    ON_HEROKU = 'DYNO' in environ
 
-else:
-
-    ON_HEROKU = True
-
-URL = environ.get("URL", "https://share.google/rsgEKs6RSdH5MbxEb")
+URL = environ.get("URL", "https://streem-ha.onrender.com")
 
 
 
@@ -393,6 +389,7 @@ else:
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 
 # Ask Doubt on telegram @KingVJ01
+
 
 
 
