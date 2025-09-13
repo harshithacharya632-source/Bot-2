@@ -326,9 +326,6 @@ SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 
-if 'DYNO' in environ:
-
-    ON_HEROKU = 'DYNO' in environ
 
 URL = environ.get("URL", "https://streem-ha.onrender.com")
 
@@ -389,6 +386,7 @@ else:
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 
 # Ask Doubt on telegram @KingVJ01
+
 
 
 
